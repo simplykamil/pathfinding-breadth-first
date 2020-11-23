@@ -72,8 +72,10 @@ class BFPathfinder:
                 q.put(moves_so_far_copy)
                 if (rvn, cvn) == end_pos:
                     final_moves = moves_so_far_copy
+                    print()
                     print(f'Path found, took {len(final_moves)} moves')
                     print(f'Moves: {final_moves}')
+                    print()
                     finished = True
 
                     [grid[r][c].change_state(SquareState.PATH) for r, c in final_moves]
